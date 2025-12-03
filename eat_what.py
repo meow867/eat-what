@@ -68,7 +68,3 @@ else:
         result = random.choices([i["name"] for i in items], weights=weights, k=1)[0]
         st.success(f"⭐ 抽选结果：**{result}**")
 
-    # 显示当前实际概率
-    st.markdown("### 📊 实际概率（归一化后）")
-    for item, w in zip(items, weights):
-        st.write(f"- {item['name']}：{w*100:.2f}%")
